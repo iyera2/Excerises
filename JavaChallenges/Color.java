@@ -4,7 +4,8 @@ public class Color {
 
 	private int red;
 	private int green;
-	private int blue;
+    private int blue;
+    private int percent;
 	Random rand = new Random();
 
 	public Color() {
@@ -42,6 +43,18 @@ public class Color {
 	public void setBlue( int blue ) { 
 		this.blue = blue;
         finalColor();
+    }
+
+    public void BrightenColor(int i){
+        red = red * (1+(percent/100));
+        green = green * (1+(percent/100));
+        blue = blue * (1 + (percent/100));
+    }
+
+    public void DarkenColor(int i){
+        red = red * (percent/100);
+        blue = blue * (percent/100);
+        green = green * (percent/100);
     }
 
     public String willDisplay() {
