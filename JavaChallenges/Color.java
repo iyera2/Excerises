@@ -4,13 +4,13 @@ public class Color {
     private int red, green, blue, percent;
     Random rand = new Random();
 
-	public Color() {
+    public Color() {
 
-		red = rand.nextInt( 256 );
-		green = rand.nextInt( 256 );
-		blue = rand.nextInt( 256 );
+	    red = rand.nextInt( 256 );
+	    green = rand.nextInt( 256 );
+	    blue = rand.nextInt( 256 );
 
-	}
+    }
 
     public Color( int red, int green, int blue ) {
 
