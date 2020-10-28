@@ -1,11 +1,7 @@
 import java.util.Random;
 
 public class Color {
-
-	private int red;
-	private int green;
-    private int blue;
-    private int percent;
+    private int red, green, blue, percent;
 	Random rand = new Random();
 
 	public Color() {
@@ -80,7 +76,5 @@ public class Color {
             if( blue < 0 ) {
                 blue = 0; 
             }
-
-        
     }
 }
