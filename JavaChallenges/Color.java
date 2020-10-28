@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Color {
     private int red, green, blue, percent;
-	Random rand = new Random();
+    Random rand = new Random();
 
 	public Color() {
 
@@ -12,7 +12,7 @@ public class Color {
 
 	}
 
-	public Color( int red, int green, int blue ) {
+    public Color( int red, int green, int blue ) {
 
 		this.red = red;
 		this.green = green;
@@ -20,23 +20,23 @@ public class Color {
 
     }
     
-	public void setRed( int red ) { 
+    public void setRed( int red ) { 
 		this.red = red; 
 		finalColor();
-	}
-	public void setRed() { 
+    }
+    public void setRed() { 
         red = rand.nextInt( 256 ); 
     }
 
-	public void setGreen( int green ) { 
+    public void setGreen( int green ) { 
 		this.green = green; 
 		finalColor();
-	}
-	public void setGreen() { 
+    }
+    public void setGreen() { 
         green = rand.nextInt( 256 ); 
     }
 
-	public void setBlue( int blue ) { 
+    public void setBlue( int blue ) { 
 		this.blue = blue;
         finalColor();
     }
@@ -58,23 +58,23 @@ public class Color {
     }
         
     private void finalColor() {
-            if( red > 255 ) {
-                red = 255;
-            }
-            if( red < 0 ) {
-                red = 0;
-            }
-            if( green > 255 ) {
-                green = 255;
-            }
-            if( green < 0 ) {
-                red = 0;
-            }
-            if( blue > 255 ) {
-                blue = 255;
-            }
-            if( blue < 0 ) {
-                blue = 0; 
-            }
+        if( red > 255 ) {
+            red = 255;
+        }
+        if( red < 0 ) {
+            red = 0;
+        }
+        if( green > 255 ) {
+            green = 255;
+        }
+        if( green < 0 ) {
+            red = 0;
+        }
+        if( blue > 255 ) {
+            blue = 255;
+        }
+        if( blue < 0 ) {
+            blue = 0; 
+        }
     }
 }
