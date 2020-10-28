@@ -14,30 +14,30 @@ public class Color {
 
     public Color( int red, int green, int blue ) {
 
-	    this.red = red;
-	    this.green = green;
-	    this.blue = blue;
+        this.red = red;
+        this.green = green;
+        this.blue = blue;
 
     }
     
     public void setRed( int red ) { 
-	    this.red = red; 
-	    finalColor();
+        this.red = red; 
+        finalColor();
     }
     public void setRed() { 
         red = rand.nextInt( 256 ); 
     }
 
     public void setGreen( int green ) { 
-	    this.green = green; 
-	    finalColor();
+        this.green = green; 
+        finalColor();
     }
     public void setGreen() { 
         green = rand.nextInt( 256 ); 
     }
 
     public void setBlue( int blue ) { 
-	    this.blue = blue;
+        this.blue = blue;
         finalColor();
     }
 
