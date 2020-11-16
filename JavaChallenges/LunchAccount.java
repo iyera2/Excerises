@@ -2,7 +2,7 @@ public class LunchAccount{
 
     private int id,meals, total;
     private double startingbalance;
-    private static int studentCount = 0, number = 999;
+    private static int studentCount = 0, number = 999, idCount;
     private boolean isAdded = false;
 
   public LunchAccount(double startingbalance){ //getting constructor error don't know why
@@ -18,7 +18,7 @@ public class LunchAccount{
   }
 
   public double getBalance(){
-      return balance;
+      return startingbalance;
   }
 
   public int getId(){
