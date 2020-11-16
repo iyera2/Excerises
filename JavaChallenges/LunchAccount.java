@@ -1,45 +1,60 @@
 public class LunchAccount{
 
-    private String student;
-    private int id, startingbalance, currentbalance;
-    private static int employeeCount = 0;
+    private int id,meals, total;
+    private double startingbalance;
+    private static int studentCount = 0, number = 999;
+    private boolean isAdded = false;
 
-    public LunchAccount(String student){
+  public LunchAccount(double startingbalance){ //getting constructor error don't know why
 
-        this.student = student;
-        this.id = employeeCount;
-        employeeCount++;
-    }
+      startingbalance = 0;
+      this.id = 1000 + idCount;
+      idCount++;
+      meals = 0;
+      total = 0;
+      this.startingbalance = 0;
+      addBalance(startingbalance);
 
-    public void setStudent(String student){
-        this.student = student;
-    }
+  }
 
-    public void getStudent(){
-        return student;
-    }
+  public double getBalance(){
+      return balance;
+  }
 
-    public void setID(int id){
-        this.id = id;
-    }
+  public int getId(){
+    return id;
+  }
 
-    public int getID(){
-        return id;
-    }
-    public void setStartingBalance(int startingbalance){
-        this.startingbalance = startingbalance;
-    }
-    public void setCurrentBalance(int currentbalance){
-        this.currentbalance = currentbalance;
-    }
+  public void addBalance(double balance){
+      if(startingbalance > 0){
+          if(!isAdded){
+            studentCount++;
+            this.isAdded = true;
+            if(studentCount <= 100){
+                this.startingbalance += 20;
+            }
+            this.startingbalance += startingbalance;
+          }
+      }
+  }
 
-    public void totalMoney( int money){
+  public void lunch(double cost){
+      if(startingbalance > cost && cost > 0){
+          startingbalance -= cost;
+          meals++;
+          total += cost;
+      }
+  }
 
-        this.startingbalance += money;
-        this.currentbalance += money;
+  private boolean buyLunch(double cost){
+      return startingbalance >= cost;
+  }
 
-    }
+  public String toString(){
+      return "Student " + id + " has " + startingbalance + " Total spent:" + total + "They have purchased " + meals;
+  }
 
+  
     
    
 }
