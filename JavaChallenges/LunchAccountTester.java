@@ -16,12 +16,6 @@ public class LunchAccountTester{ // getting constructor error don't know why
         testPurchase(student1.buyLunch(-100));
         System.out.println(secondstudent);
 
-        
-        
-
-        System.out.println(firststudent);
-        System.out.println(secondstudent);
-
         for(int i = 0; i < 98; i++){
             LunchAccount student = new LunchAccount(10.50);
             System.out.println(student);
@@ -35,7 +29,7 @@ public class LunchAccountTester{ // getting constructor error don't know why
         if(isCheck){
             System.out.println("Purchase went through");
         } else{
-            System.out.println("Your purchase didn't go through. :(");
+            System.out.println("Your purchase didn't go through.:(  ");
         }
     }
 }
