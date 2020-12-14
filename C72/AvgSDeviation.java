@@ -2,8 +2,7 @@ import java.util.*;
 import java.io.*;
 
 public class AvgSDeviation{
-    public static void main(String[] args) throws IOException 
-    {
+    public static void main(String[] args) throws IOException {
         File file = new File("InputASD.txt");
         Scanner scan = new Scanner(file);
         double num = 0, sum = 0, sumSQ = 0, avg, avgSQ = 0, var, sd;

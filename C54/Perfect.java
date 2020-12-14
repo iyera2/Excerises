@@ -10,7 +10,8 @@ public class Perfect{
             System.out.println(isPerfect(i));
         }   
 
-        public static boolean isPerfect(int num){
+        public static boolean isPerfect(int num)
+        {
             int sum = 0;
             for(i = 1; i < num; i++){
                 if(num % i == 0){
