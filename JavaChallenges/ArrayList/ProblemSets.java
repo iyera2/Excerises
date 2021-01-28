@@ -57,4 +57,17 @@ public class ProblemSets{
         }
         return nums;
     }
+
+    //Ex 4
+    public static ArrayList<Integer> reverseArray(ArrayList<Integer> integer){
+        for(int i = 0; i < integer.size()/2; i++){
+            int temp = integer.get(i).intValue();
+            integer.set(i, integer.get(integer.size() - (i+1)));
+            integer.set(integer.get(integer.size() - (i+1)),temp);
+        }
+        return integer;
+    }
+
+    //Ex 5
 }
+
